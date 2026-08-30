@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
+  <meta name="author" content="Saif Thabet" />
+  <meta name="theme-color" content="#080b10" />
+  <link rel="canonical" href="{{URL}}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{DESCRIPTION}}" />
+  <meta property="og:url" content="{{URL}}" />
+  <meta property="og:image" content="https://www.saifthabet.tech/social-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saif Thabet software engineer and frontend developer portfolio" />
+  <meta property="og:site_name" content="Saif Thabet Portfolio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{TITLE}}" />
+  <meta name="twitter:description" content="{{DESCRIPTION}}" />
+  <meta name="twitter:image" content="https://www.saifthabet.tech/social-preview.jpg" />
+  <meta name="twitter:image:alt" content="Saif Thabet software engineer and frontend developer portfolio" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512-optimized.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="theme-init.js?v=four-pages-3"></script>
+  <link rel="stylesheet" href="style.css?v=four-pages-3" />
+  <noscript><style>.reveal-up,.reveal-left,.reveal-right{opacity:1;transform:none}.cursor,.cursor-follower{display:none}.nav__links{display:flex!important;flex-wrap:wrap;gap:10px 16px}.navbar{position:relative;height:auto;min-height:72px;flex-wrap:wrap;padding-block:16px;gap:16px}.nav__actions{display:none}.nav__links a{font-size:13px}</style></noscript>
+</head>
+<body id="top" data-page="{{PAGE}}">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ═══════════════════════════════ LOADER ═══════════════════════════════ -->
+  
+
+  <!-- ═══════════════════════════════ CURSOR ═══════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar" id="navbar" aria-label="Primary navigation">
+    <a href="index.html" class="nav__logo" aria-label="Saif Thabet home">
+      <span class="logo__mark">ST</span>
+      <span class="logo__dot"></span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">{{DESKTOP_NAV}}</ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
+      </button>
+      <a href="contact.html" class="btn btn--outline btn--sm">Hire Me</a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+    <ul>{{MOBILE_NAV}}</ul>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+{{CONTENT}}
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="logo__mark">ST</span>
+          <span class="footer__name">Saif Thabet</span>
+        </div>
+        <p class="footer__copy">
+          &copy; <span id="year"></span> Saif Thabet · Engineering Beautiful Experiences. <span class="heart">Precision,</span> Performance & Purpose.
+        </p>
+        <a href="#top" class="footer__top" aria-label="Back to top">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" id="mobileBar" aria-label="Mobile quick navigation">
+    {{BOTTOM_NAV}}
+  </nav>
+
+  <script src="script.js?v=four-pages-3"></script>
+</body>
+</html>

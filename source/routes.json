@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hero", "slug": "index", "label": "Home", "mobileLabel": "Home",
+    "title": "Saif Thabet | Software Engineer & Frontend Developer",
+    "description": "Meet Saif Thabet, a software engineer and frontend developer, and explore a featured website project and his approach to digital experiences.",
+    "sections": ["index", "featured", "about"]
+  },
+  {
+    "id": "work", "slug": "work", "label": "Work & Services", "mobileLabel": "Work",
+    "title": "Work & Services | Saif Thabet",
+    "description": "Explore Saif Thabet’s selected website and application projects, web development services, and ways to collaborate.",
+    "sections": ["projects", "services", "work-cta"]
+  },
+  {
+    "id": "experience", "slug": "experience", "label": "Experience", "mobileLabel": "Experience",
+    "title": "Experience & Skills | Saif Thabet",
+    "description": "Explore Saif Thabet’s professional experience, education and technical skills, and download his CV.",
+    "sections": ["experience", "skills", "experience-cta"]
+  },
+  {
+    "id": "contact", "slug": "contact", "label": "Contact", "mobileLabel": "Contact",
+    "title": "Contact | Saif Thabet",
+    "description": "Contact Saif Thabet to discuss a website, frontend development project or collaboration.",
+    "sections": ["contact"]
+  }
+]
