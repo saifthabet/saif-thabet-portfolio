@@ -8,7 +8,9 @@ const pages = JSON.parse(read('source/routes.json'));
 const layout = read('source/layout.html');
 const origin = 'https://www.saifthabet.tech';
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const url = page => `${origin}/${page.slug === 'index' ? '' : page.slug + '.html'}`;
+const pagePath = slug => slug === 'index' ? '/' : `/${slug}`;
+const url = page => `${origin}${pagePath(page.slug)}`;
+const cleanLinks = content => content.replace(/href="(index|work|experience|contact)\.html([?#][^"]*)?"/g, (_, slug, suffix = '') => `href="${pagePath(slug)}${suffix}"`);
 const icons = {
   hero: '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/>',
   projects: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
@@ -38,11 +40,14 @@ for (const page of pages) {
     if (!(key in tokens)) throw new Error(`Unknown layout token: ${key}`);
     return tokens[key];
   });
-  writeFileSync(path.join(root, `${page.slug}.html`), output);
+  writeFileSync(path.join(root, `${page.slug}.html`), cleanLinks(output));
 }
 // Compatibility documents for old bookmarks on any static host; not navigation pages.
 for (const [old, destination] of Object.entries(redirects)) {
-  writeFileSync(path.join(root, `${old}.html`), `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page moved | Saif Thabet</title><meta name="robots" content="noindex"><link rel="canonical" href="${origin}/${destination.split('#')[0] === 'index.html' ? '' : destination.split('#')[0]}"><meta http-equiv="refresh" content="0;url=${destination}"></head><body><p>This page has moved. <a href="${destination}">Continue to the updated page</a>.</p></body></html>\n`);
+  const [file, fragment] = destination.split('#');
+  const canonical = pagePath(file.replace('.html', ''));
+  const target = canonical + (fragment ? `#${fragment}` : '');
+  writeFileSync(path.join(root, `${old}.html`), `<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page moved | Saif Thabet</title><meta name="robots" content="noindex"><link rel="canonical" href="${origin}${canonical}"><meta http-equiv="refresh" content="0;url=${target}"></head><body><p>This page has moved. <a href="${target}">Continue to the updated page</a>.</p></body></html>\n`);
 }
 writeFileSync(path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(page => `  <url><loc>${url(page)}</loc></url>`).join('\n')}\n</urlset>\n`);
 console.log(`Built ${pages.length} static pages and sitemap.xml.`);

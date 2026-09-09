@@ -7,6 +7,6 @@ try {
 // Preserve bookmarks from the previous single-page portfolio.
 if (/\/(?:index\.html)?$/.test(location.pathname)) {
   const section = location.hash.slice(1);
-  const destinations = {projects: 'work.html#projects', services: 'work.html#services', skills: 'experience.html#skills', experience: 'experience.html', contact: 'contact.html'};
+  const destinations = {projects: '/work#projects', services: '/work#services', skills: '/experience#skills', experience: '/experience', contact: '/contact'};
   if (Object.hasOwn(destinations, section)) location.replace(destinations[section]);
 }

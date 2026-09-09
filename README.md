@@ -27,7 +27,13 @@ subsequent section headings render as H2. No npm packages are required.
 CSS and JavaScript remain shared root-level files. Generated HTML is included,
 so Node is not required to preview or deploy the supplied build.
 
-Open `index.html` with Live Server. Links use `.html` for static-host portability.
+Public URLs are `/`, `/work`, `/experience` and `/contact`. Keep the `.html`
+filenames on disk: Vercel's `cleanUrls` setting serves them without extensions
+and redirects old `.html` requests. Both `/index` and `/index.html` redirect to `/`.
+Navigation, canonical metadata, compatibility links and the sitemap use clean URLs.
+Preview on Vercel or with a local server that supports extensionless HTML routes;
+opening files directly or using an unconfigured Live Server will not emulate
+these production routes. Do not rename or delete the HTML files.
 Old home-page section bookmarks such as `/#services` redirect to the grouped page
 when JavaScript is enabled; `/#about` stays on Home. Old `about.html`, `projects.html`,
 `services.html` and `skills.html` URLs are small compatibility documents with an
@@ -52,7 +58,7 @@ Upload all root HTML files (including compatibility documents), shared CSS/JS,
 images and other assets together. Replace the previous build as a complete folder.
 Do not configure a single-page-app catch-all rewrite. The `source` directory and
 `build.mjs` are maintenance files and may be omitted from the public upload.
-The sitemap uses `.html` URLs consistently with the included Vercel configuration.
+The sitemap uses clean URLs consistently with the included Vercel configuration.
 
 ## Final owner checks
 

@@ -30,8 +30,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="theme-init.js?v=four-pages-3"></script>
-  <link rel="stylesheet" href="style.css?v=four-pages-3" />
+  <script src="theme-init.js?v=clean-urls-4"></script>
+  <link rel="stylesheet" href="style.css?v=brand-logo-5" />
   <noscript><style>.reveal-up,.reveal-left,.reveal-right{opacity:1;transform:none}.cursor,.cursor-follower{display:none}.nav__links{display:flex!important;flex-wrap:wrap;gap:10px 16px}.navbar{position:relative;height:auto;min-height:72px;flex-wrap:wrap;padding-block:16px;gap:16px}.nav__actions{display:none}.nav__links a{font-size:13px}</style></noscript>
 </head>
 <body id="top" data-page="hero">
@@ -46,21 +46,20 @@
 
   <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
   <nav class="navbar" id="navbar" aria-label="Primary navigation">
-    <a href="index.html" class="nav__logo" aria-label="Saif Thabet home">
-      <span class="logo__mark">ST</span>
-      <span class="logo__dot"></span>
+    <a href="/" class="nav__logo nav__logo--image" aria-label="Saif Thabet home">
+      <img class="nav__brand-image" src="saif-logo.png" alt="" width="1280" height="1280" decoding="async" />
     </a>
 
-    <ul class="nav__links" id="navLinks"><li><a href="index.html" class="nav__link active" aria-current="page">Home</a></li>
-      <li><a href="work.html" class="nav__link">Work & Services</a></li>
-      <li><a href="experience.html" class="nav__link">Experience</a></li>
-      <li><a href="contact.html" class="nav__link">Contact</a></li></ul>
+    <ul class="nav__links" id="navLinks"><li><a href="/" class="nav__link active" aria-current="page">Home</a></li>
+      <li><a href="/work" class="nav__link">Work & Services</a></li>
+      <li><a href="/experience" class="nav__link">Experience</a></li>
+      <li><a href="/contact" class="nav__link">Contact</a></li></ul>
 
     <div class="nav__actions">
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
         <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
       </button>
-      <a href="contact.html" class="btn btn--outline btn--sm">Hire Me</a>
+      <a href="/contact" class="btn btn--outline btn--sm">Hire Me</a>
       <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -69,10 +68,10 @@
 
   <!-- Mobile Menu -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
-    <ul><li><a href="index.html" class="mobile-link active" aria-current="page">Home</a></li>
-      <li><a href="work.html" class="mobile-link">Work & Services</a></li>
-      <li><a href="experience.html" class="mobile-link">Experience</a></li>
-      <li><a href="contact.html" class="mobile-link">Contact</a></li></ul>
+    <ul><li><a href="/" class="mobile-link active" aria-current="page">Home</a></li>
+      <li><a href="/work" class="mobile-link">Work & Services</a></li>
+      <li><a href="/experience" class="mobile-link">Experience</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li></ul>
   </nav>
 
   <main id="main-content" tabindex="-1">
@@ -105,11 +104,11 @@
       </p>
 
       <div class="hero__cta reveal-up">
-        <a href="work.html#projects" class="btn btn--primary">
+        <a href="/work#projects" class="btn btn--primary">
           <span>View Projects</span>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="contact.html" class="btn btn--ghost">
+        <a href="/contact" class="btn btn--ghost">
           <span>Get in Touch</span>
         </a>
       </div>
@@ -139,7 +138,7 @@
   <div class="container">
     <div class="section__label">Featured project</div>
     <article class="featured__card">
-      <a class="featured__image" href="work.html#layers-of-heaven" aria-label="View Layers of Heaven in selected projects">
+      <a class="featured__image" href="/work#layers-of-heaven" aria-label="View Layers of Heaven in selected projects">
         <img src="layers-of-heaven.webp" alt="Layers of Heaven bakery website, featuring its warm color palette and editorial layout" width="1311" height="629" loading="lazy" decoding="async" />
       </a>
       <div class="featured__body">
@@ -147,7 +146,7 @@
         <h2 id="featured-heading">Layers of <em>Heaven</em></h2>
         <p>A warm, editorial website for a premium bakery and homemade desserts brand—bringing its visual identity into a focused digital experience.</p>
         <div class="project-card__tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-        <a class="btn btn--outline" href="work.html">Explore Work &amp; Services <span aria-hidden="true">→</span></a>
+        <a class="btn btn--outline" href="/work">Explore Work &amp; Services <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </div>
@@ -186,8 +185,8 @@
         </div>
 
         <div class="about__actions reveal-up">
-           <a href="experience.html" class="btn btn--outline">Experience &amp; Skills</a>
-           <a href="contact.html" class="btn btn--ghost btn--sm">Let’s talk</a>
+           <a href="/experience" class="btn btn--outline">Experience &amp; Skills</a>
+           <a href="/contact" class="btn btn--ghost btn--sm">Let’s talk</a>
            <a href="Saif_Thabet_CV_En.pdf"
             class="btn btn--primary btn--sm"
             download="Saif_Thabet_CV_En.pdf">
@@ -220,10 +219,10 @@
   </footer>
 
   <nav class="mobile-bar" id="mobileBar" aria-label="Mobile quick navigation">
-    <a href="index.html" class="mobile-bar__item" aria-current="page"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Home</span></a>
-    <a href="work.html" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Work</span></a>
-    <a href="experience.html" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a20 20 0 0 0 18 0M12 11v4"/></svg><span>Experience</span></a>
-    <a href="contact.html" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Contact</span></a>
+    <a href="/" class="mobile-bar__item" aria-current="page"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Home</span></a>
+    <a href="/work" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Work</span></a>
+    <a href="/experience" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a20 20 0 0 0 18 0M12 11v4"/></svg><span>Experience</span></a>
+    <a href="/contact" class="mobile-bar__item"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Contact</span></a>
   </nav>
 
   <script src="script.js?v=four-pages-3"></script>
