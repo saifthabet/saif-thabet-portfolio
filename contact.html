@@ -25,29 +25,19 @@
   <meta name="twitter:image" content="https://www.saifthabet.tech/social-preview.jpg" />
   <meta name="twitter:image:alt" content="Saif Thabet software engineer and frontend developer portfolio" />
 
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512-optimized.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="theme-init.js?v=clean-urls-4"></script>
-  <link rel="stylesheet" href="style.css?v=brand-logo-5" />
-  <noscript><style>.reveal-up,.reveal-left,.reveal-right{opacity:1;transform:none}.cursor,.cursor-follower{display:none}.nav__links{display:flex!important;flex-wrap:wrap;gap:10px 16px}.navbar{position:relative;height:auto;min-height:72px;flex-wrap:wrap;padding-block:16px;gap:16px}.nav__actions{display:none}.nav__links a{font-size:13px}</style></noscript>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script src="/theme-init.js?v=37463a6e34d6"></script>
+  <link rel="stylesheet" href="/style.css?v=f6c0368d1795" />
+  <script src="/script.js?v=9ddbfe4f2768" defer></script>
 </head>
 <body id="top" data-page="contact">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- ═══════════════════════════════ LOADER ═══════════════════════════════ -->
-  
-
-  <!-- ═══════════════════════════════ CURSOR ═══════════════════════════════ -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
   <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
   <nav class="navbar" id="navbar" aria-label="Primary navigation">
     <a href="/" class="nav__logo nav__logo--image" aria-label="Saif Thabet home">
-      <img class="nav__brand-image" src="saif-logo.png" alt="" width="1280" height="1280" decoding="async" />
+      <img class="nav__brand-image" src="/saif-logo.webp" alt="" width="192" height="192" />
     </a>
 
     <ul class="nav__links" id="navLinks"><li><a href="/" class="nav__link">Home</a></li>
@@ -56,10 +46,10 @@
       <li><a href="/contact" class="nav__link active" aria-current="page">Contact</a></li></ul>
 
     <div class="nav__actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Light theme" aria-pressed="false">
         <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
       </button>
-      <a href="/contact" class="btn btn--outline btn--sm">Hire Me</a>
+      <a href="/contact" class="btn btn--outline btn--sm nav__hire">Hire Me</a>
       <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -67,7 +57,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" inert>
     <ul><li><a href="/" class="mobile-link">Home</a></li>
       <li><a href="/work" class="mobile-link">Work & Services</a></li>
       <li><a href="/experience" class="mobile-link">Experience</a></li>
@@ -77,14 +67,14 @@
   <main id="main-content" tabindex="-1">
 <section class="section contact" id="contact">
     <div class="container">
-      <div class="section__label reveal-up">Contact</div>
-      <h1 class="section__heading reveal-up">Let's <em>Work Together</em></h1>
-      <p class="section__sub reveal-up">Have a project in mind? Let's talk and build something great.</p>
+      <div class="section__label">Contact</div>
+      <h1 class="section__heading">Let's <em>Work Together</em></h1>
+      <p class="section__sub">Have a project in mind? Let's talk and build something great.</p>
 
       <div class="contact__grid">
 
-        <div class="contact__info reveal-left">
-          <h3 class="contact__info-title">Get in Touch</h3>
+        <div class="contact__info">
+          <h2 class="contact__info-title">Get in Touch</h2>
 
           <div class="contact__item">
             <div class="contact__item-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
@@ -110,38 +100,26 @@
             </div>
           </div>
 
-          <div class="contact__social">
-            <a href="https://www.linkedin.com/in/saif-thabet-25a2702a6" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7m5 0v-7m0 3c0-4 5-4 5 0v4"/><circle cx="7" cy="7" r=".9" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="https://wa.me/967735581855" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="m8 7 1.4 2.8-1 1a9 9 0 0 0 3.8 3.8l1-1L16 15c-1 4-9-1-9-5 0-1.5.5-2.5 1-3Z"/></svg>
-            </a>
-          </div>
         </div>
 
-        <div class="contact__form-wrap reveal-right">
+        <div class="contact__form-wrap">
           <form class="contact__form" id="contactForm" action="https://formspree.io/f/xqayzlbo" method="POST">
             <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="form-group">
-              <input type="text" id="formName" name="name" placeholder=" " autocomplete="name" required />
               <label for="formName">Your Name</label>
-              <div class="form-line"></div>
+              <input type="text" id="formName" name="name" autocomplete="name" required />
             </div>
             <div class="form-group">
-              <input type="email" id="formEmail" name="email" placeholder=" " autocomplete="email" required />
               <label for="formEmail">Your Email</label>
-              <div class="form-line"></div>
+              <input type="email" id="formEmail" name="email" autocomplete="email" required />
             </div>
             <div class="form-group">
-              <input type="text" id="formSubject" name="subject" placeholder=" " />
-              <label for="formSubject">Subject</label>
-              <div class="form-line"></div>
+              <label for="formSubject">Subject (optional)</label>
+              <input type="text" id="formSubject" name="subject" />
             </div>
             <div class="form-group">
-              <textarea id="formMessage" name="message" rows="5" placeholder=" " required></textarea>
               <label for="formMessage">Your Message</label>
-              <div class="form-line"></div>
+              <textarea id="formMessage" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Send Message</span>
@@ -162,11 +140,10 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <span class="logo__mark">ST</span>
           <span class="footer__name">Saif Thabet</span>
         </div>
         <p class="footer__copy">
-          &copy; <span id="year"></span> Saif Thabet · Engineering Beautiful Experiences. <span class="heart">Precision,</span> Performance & Purpose.
+          &copy; <span id="year">2026</span> Saif Thabet
         </p>
         <a href="#top" class="footer__top" aria-label="Back to top">
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
@@ -182,6 +159,5 @@
     <a href="/contact" class="mobile-bar__item" aria-current="page"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Contact</span></a>
   </nav>
 
-  <script src="script.js?v=four-pages-3"></script>
 </body>
 </html>

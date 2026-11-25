@@ -1,13 +1,13 @@
 <section class="section contact" id="contact">
     <div class="container">
-      <div class="section__label reveal-up">Contact</div>
-      <h1 class="section__heading reveal-up">Let's <em>Work Together</em></h1>
-      <p class="section__sub reveal-up">Have a project in mind? Let's talk and build something great.</p>
+      <div class="section__label">Contact</div>
+      <h1 class="section__heading">Let's <em>Work Together</em></h1>
+      <p class="section__sub">Have a project in mind? Let's talk and build something great.</p>
 
       <div class="contact__grid">
 
-        <div class="contact__info reveal-left">
-          <h3 class="contact__info-title">Get in Touch</h3>
+        <div class="contact__info">
+          <h2 class="contact__info-title">Get in Touch</h2>
 
           <div class="contact__item">
             <div class="contact__item-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
@@ -33,38 +33,26 @@
             </div>
           </div>
 
-          <div class="contact__social">
-            <a href="https://www.linkedin.com/in/saif-thabet-25a2702a6" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7m5 0v-7m0 3c0-4 5-4 5 0v4"/><circle cx="7" cy="7" r=".9" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="https://wa.me/967735581855" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="m8 7 1.4 2.8-1 1a9 9 0 0 0 3.8 3.8l1-1L16 15c-1 4-9-1-9-5 0-1.5.5-2.5 1-3Z"/></svg>
-            </a>
-          </div>
         </div>
 
-        <div class="contact__form-wrap reveal-right">
+        <div class="contact__form-wrap">
           <form class="contact__form" id="contactForm" action="https://formspree.io/f/xqayzlbo" method="POST">
             <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="form-group">
-              <input type="text" id="formName" name="name" placeholder=" " autocomplete="name" required />
               <label for="formName">Your Name</label>
-              <div class="form-line"></div>
+              <input type="text" id="formName" name="name" autocomplete="name" required />
             </div>
             <div class="form-group">
-              <input type="email" id="formEmail" name="email" placeholder=" " autocomplete="email" required />
               <label for="formEmail">Your Email</label>
-              <div class="form-line"></div>
+              <input type="email" id="formEmail" name="email" autocomplete="email" required />
             </div>
             <div class="form-group">
-              <input type="text" id="formSubject" name="subject" placeholder=" " />
-              <label for="formSubject">Subject</label>
-              <div class="form-line"></div>
+              <label for="formSubject">Subject (optional)</label>
+              <input type="text" id="formSubject" name="subject" />
             </div>
             <div class="form-group">
-              <textarea id="formMessage" name="message" rows="5" placeholder=" " required></textarea>
               <label for="formMessage">Your Message</label>
-              <div class="form-line"></div>
+              <textarea id="formMessage" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Send Message</span>

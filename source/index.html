@@ -1,35 +1,28 @@
 <section class="hero" id="hero">
-    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
     <div class="hero__noise"></div>
 
     <div class="hero__content">
-      <div class="hero__badge reveal-up">
+      <div class="hero__badge">
         <span class="badge__dot"></span>
         <span>Available for work</span>
       </div>
 
-      <h1 class="hero__name reveal-up">
+      <h1 class="hero__name">
         <span class="name__line">Saif</span>
         <span class="name__line name__line--accent">Thabet</span>
       </h1>
 
-      <div class="hero__title reveal-up">
-        <span class="title__prefix">—</span>
-        <span class="title__text" id="typedTitle">Software Engineer &amp; Frontend Developer</span>
-        <span class="title__cursor">|</span>
-      </div>
+      <p class="hero__title"><span class="title__prefix" aria-hidden="true">—</span> Software Engineer &amp; Frontend Developer</p>
 
-      <p class="hero__tagline reveal-up">
-        <!-- PLACEHOLDER: Your tagline -->
-        I craft <em>digital experiences</em> that live at the intersection<br>
-        of <em>elegant design</em> and <em>clean code.</em>
+      <p class="hero__tagline">
+        I build responsive websites and interfaces for businesses, with a focus on <em>accessible design</em> and <em>clean code</em>.
       </p>
 
-      <div class="hero__cta reveal-up">
+      <div class="hero__cta">
         <a href="projects.html" class="btn btn--primary">
           <span>View Projects</span>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
         <a href="contact.html" class="btn btn--ghost">
           <span>Get in Touch</span>
@@ -39,20 +32,9 @@
       
     </div>
 
-    <div class="hero__stats reveal-right">
-      <div class="stat">
-        <span class="stat__num" data-count="1">1</span>
-        <span class="stat__label">Years Exp.</span>
-      </div>
-      <div class="stat__divider"></div>
-      <div class="stat">
-        <span class="stat__num" data-count="10">10</span>
-        <span class="stat__label">Projects</span>
-      </div>
-      <div class="stat__divider"></div>
-      <div class="stat">
-        <span class="stat__num" data-count="5">5</span>
-        <span class="stat__label">Clients</span>
-      </div>
-    </div>
+    <ul class="hero__facts" aria-label="At a glance">
+      <li><span>Selected work</span> Websites &amp; apps</li>
+      <li><span>Education</span> B.Sc. Computer Science</li>
+      <li><span>Based in</span> Sana’a, Yemen</li>
+    </ul>
   </section>
