@@ -14,6 +14,8 @@ const versions = {
   SCRIPT_VERSION: assetVersion('script.js'),
 };
 const origin = 'https://www.saifthabet.tech';
+const shareImage = 'saif-thabet-share.jpg';
+const shareVersion = createHash('sha256').update(readFileSync(path.join(root, shareImage))).digest('hex').slice(0, 12);
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const pagePath = slug => slug === 'index' ? '/' : `/${slug}`;
 const url = page => `${origin}${pagePath(page.slug)}`;
@@ -27,7 +29,7 @@ function homeStructuredData(page) {
         '@type': 'WebSite',
         '@id': website,
         name: 'Saif Thabet',
-        alternateName: ['Saif Thabet Portfolio', 'سيف ثابت'],
+        alternateName: 'Saif Thabet Portfolio',
         url: home,
         inLanguage: 'en',
       },
@@ -42,7 +44,6 @@ function homeStructuredData(page) {
           '@type': 'Person',
           '@id': home + '#saif-thabet',
           name: 'Saif Thabet',
-          alternateName: 'سيف ثابت',
           url: home,
           jobTitle: 'Software Engineer & Frontend Developer',
           homeLocation: { '@type': 'Place', name: 'Sana’a, Yemen' },
@@ -82,7 +83,7 @@ for (const page of pages) {
     DESCRIPTION: escape(page.description),
     URL: url(page),
     HOME_URL: origin + '/',
-    SHARE_IMAGE_URL: origin + '/saif-thabet-share.jpg',
+    SHARE_IMAGE_URL: `${origin}/${shareImage}?v=${shareVersion}`,
     STRUCTURED_DATA: page.slug === 'index' ? homeStructuredData(page) : '',
     DESKTOP_NAV: nav(false),
     MOBILE_NAV: nav(true),
