@@ -81,6 +81,8 @@ for (const page of pages) {
     TITLE: escape(page.title),
     DESCRIPTION: escape(page.description),
     URL: url(page),
+    HOME_URL: origin + '/',
+    SHARE_IMAGE_URL: origin + '/saif-thabet-share.jpg',
     STRUCTURED_DATA: page.slug === 'index' ? homeStructuredData(page) : '',
     DESKTOP_NAV: nav(false),
     MOBILE_NAV: nav(true),

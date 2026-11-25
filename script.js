@@ -1,4 +1,4 @@
-// Global navigation, theme, and contact form for the static portfolio.
+// Global navigation, theme, sharing, and contact form for the static portfolio.
 'use strict';
 
 const html = document.documentElement;
@@ -83,6 +83,36 @@ themeToggle.addEventListener('click', () => {
 syncThemeControls();
 html.dataset.enhanced = '';
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const shareButton = document.getElementById('sharePortfolio');
+const shareStatus = document.getElementById('shareStatus');
+const shareFallback = document.getElementById('shareFallback');
+const shareUrl = document.getElementById('shareUrl');
+
+shareButton.hidden = false;
+shareButton.addEventListener('click', async () => {
+  shareStatus.textContent = '';
+  shareFallback.hidden = true;
+  const url = shareUrl.value;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: 'Saif Thabet', url });
+      return;
+    } catch (error) {
+      if (error.name === 'AbortError') return;
+    }
+  }
+
+  try {
+    await navigator.clipboard.writeText(url);
+    shareStatus.textContent = 'Portfolio link copied.';
+  } catch {
+    shareFallback.hidden = false;
+    shareUrl.focus();
+    shareUrl.select();
+    shareStatus.textContent = 'Copy the selected portfolio link.';
+  }
+});
 
 // The decorative constellation settles after a few seconds and stays still.
 const canvas = document.getElementById('heroCanvas');
