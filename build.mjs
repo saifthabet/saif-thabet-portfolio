@@ -17,6 +17,42 @@ const origin = 'https://www.saifthabet.tech';
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const pagePath = slug => slug === 'index' ? '/' : `/${slug}`;
 const url = page => `${origin}${pagePath(page.slug)}`;
+function homeStructuredData(page) {
+  const home = url(page);
+  const website = home + '#website';
+  const data = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': website,
+        name: 'Saif Thabet',
+        alternateName: 'Saif Thabet Portfolio',
+        url: home,
+        inLanguage: 'en',
+      },
+      {
+        '@type': 'ProfilePage',
+        '@id': home + '#profile',
+        url: home,
+        name: page.title,
+        description: page.description,
+        isPartOf: { '@id': website },
+        mainEntity: {
+          '@type': 'Person',
+          '@id': home + '#saif-thabet',
+          name: 'Saif Thabet',
+          url: home,
+          jobTitle: 'Software Engineer & Frontend Developer',
+          homeLocation: { '@type': 'Place', name: 'Sana’a, Yemen' },
+          sameAs: ['https://www.linkedin.com/in/saif-thabet-25a2702a6'],
+        },
+      },
+    ],
+  };
+  const json = JSON.stringify(data).replaceAll('<', '\\u003c');
+  return `  <script type="application/ld+json">${json}</script>`;
+}
 const cleanLinks = content => content.replace(/href="(index|work|experience|contact)\.html([?#][^"]*)?"/g, (_, slug, suffix = '') => `href="${pagePath(slug)}${suffix}"`);
 const icons = {
   hero: '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/>',
@@ -38,7 +74,19 @@ for (const page of pages) {
     if (index > 0) section = section.replace(/<h1\b/g, '<h2').replace(/<\/h1>/g, '</h2>');
     return rewriteLinks(section);
   }).join('\n');
-  const tokens = {CONTENT: content, PAGE: page.id, TITLE: escape(page.title), DESCRIPTION: escape(page.description), URL: url(page), DESKTOP_NAV: nav(false), MOBILE_NAV: nav(true), BOTTOM_NAV: bottomNav, YEAR: new Date().getUTCFullYear(), ...versions};
+  const tokens = {
+    CONTENT: content,
+    PAGE: page.id,
+    TITLE: escape(page.title),
+    DESCRIPTION: escape(page.description),
+    URL: url(page),
+    STRUCTURED_DATA: page.slug === 'index' ? homeStructuredData(page) : '',
+    DESKTOP_NAV: nav(false),
+    MOBILE_NAV: nav(true),
+    BOTTOM_NAV: bottomNav,
+    YEAR: new Date().getUTCFullYear(),
+    ...versions,
+  };
   const output = layout.replace(/\{\{([A-Z_]+)\}\}/g, (_, key) => {
     if (!(key in tokens)) throw new Error(`Unknown layout token: ${key}`);
     return tokens[key];
