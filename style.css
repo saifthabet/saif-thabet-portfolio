@@ -584,6 +584,16 @@ body:not([data-page="hero"]) main > .section:first-child {
   font-style: italic;
 }
 
+.hero__name-ar {
+  width: fit-content;
+  margin: -8px 0 16px;
+  color: var(--accent);
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .hero__title {
   font-family: var(--font-mono);
   font-size: clamp(14px, 2vw, 18px);
