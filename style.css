@@ -192,9 +192,7 @@ button { cursor: pointer; border: none; background: none; }
   height: 54px;
   flex: 0 0 88px;
   overflow: hidden;
-  border: 1px solid #343843;
-  border-radius: 12px;
-  background: linear-gradient(155deg, #222933, #101319 76%);
+  border-radius: 8px;
 }
 .nav__brand-image {
   position: absolute;
@@ -205,9 +203,10 @@ button { cursor: pointer; border: none; background: none; }
   transform: translate(-50%, -50%);
   object-fit: contain;
 }
-.nav__logo--image:hover { border-color: var(--accent); }
 .nav__logo--image:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-[data-theme="light"] .nav__logo--image { box-shadow: 0 2px 7px rgba(26,28,34,0.18); }
+[data-theme="light"] .nav__brand-image {
+  filter: drop-shadow(0 0 0.7px rgba(24,28,35,0.65)) drop-shadow(0 2px 2px rgba(24,28,35,0.2));
+}
 @media (max-width: 480px) {
   .nav__logo--image { width: 76px; height: 48px; flex-basis: 76px; }
   .nav__brand-image { width: 72px; height: 72px; }
