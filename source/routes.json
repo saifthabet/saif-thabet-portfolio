@@ -3,24 +3,44 @@
     "id": "hero", "slug": "index", "label": "Home", "mobileLabel": "Home",
     "title": "Saif Thabet | Software Engineer & Frontend Developer",
     "description": "Saif Thabet is a software engineer and frontend developer based in Sana’a, Yemen. Explore his web projects, professional experience, and contact details.",
-    "sections": ["index", "featured", "about"]
+    "sections": ["index", "featured", "about"],
+    "ar": {
+      "label": "الرئيسية", "mobileLabel": "الرئيسية",
+      "title": "سيف ثابت | مهندس برمجيات ومطوّر واجهات أمامية",
+      "description": "سيف ثابت، مهندس برمجيات ومطوّر واجهات أمامية في صنعاء، اليمن. تصفّح مشاريعي وخبرتي المهنية وطرق التواصل معي."
+    }
   },
   {
     "id": "work", "slug": "work", "label": "Work & Services", "mobileLabel": "Work",
     "title": "Work & Services | Saif Thabet",
     "description": "Explore Saif Thabet’s selected website and application projects, web development services, and ways to collaborate.",
-    "sections": ["projects", "services", "work-cta"]
+    "sections": ["projects", "services", "work-cta"],
+    "ar": {
+      "label": "الأعمال والخدمات", "mobileLabel": "الأعمال",
+      "title": "الأعمال والخدمات | سيف ثابت",
+      "description": "تصفّح مشاريع سيف ثابت في تطوير المواقع والتطبيقات، وتعرّف على خدماته وطرق التعاون معه."
+    }
   },
   {
     "id": "experience", "slug": "experience", "label": "Experience", "mobileLabel": "Experience",
     "title": "Experience & Skills | Saif Thabet",
     "description": "Explore Saif Thabet’s professional experience, education and technical skills, and download his CV.",
-    "sections": ["experience", "skills", "experience-cta"]
+    "sections": ["experience", "skills", "experience-cta"],
+    "ar": {
+      "label": "الخبرة", "mobileLabel": "الخبرة",
+      "title": "الخبرة والمهارات | سيف ثابت",
+      "description": "تعرّف على خبرة سيف ثابت المهنية وتعليمه ومهاراته التقنية، ونزّل سيرته الذاتية."
+    }
   },
   {
     "id": "contact", "slug": "contact", "label": "Contact", "mobileLabel": "Contact",
     "title": "Contact | Saif Thabet",
     "description": "Contact Saif Thabet to discuss a website, frontend development project or collaboration.",
-    "sections": ["contact"]
+    "sections": ["contact"],
+    "ar": {
+      "label": "التواصل", "mobileLabel": "التواصل",
+      "title": "التواصل | سيف ثابت",
+      "description": "تواصل مع سيف ثابت لمناقشة تطوير موقع أو واجهة ويب أو فرصة تعاون."
+    }
   }
 ]

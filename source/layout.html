@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="{{LANGUAGE}}" dir="{{DIRECTION}}" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>{{TITLE}}</title>
   <meta name="description" content="{{DESCRIPTION}}" />
-  <meta name="author" content="Saif Thabet" />
-  <meta name="theme-color" content="#080b10" />
+  <meta name="author" content="{{PERSON_NAME}}" />
+  <meta name="theme-color" content="#000000" />
   <link rel="canonical" href="{{URL}}" />
+{{ALTERNATES}}
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{TITLE}}" />
@@ -17,14 +18,16 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Saif Thabet’s silver monogram and name on a charcoal portfolio card" />
-  <meta property="og:site_name" content="Saif Thabet" />
+  <meta property="og:image:alt" content="{{SHARE_IMAGE_ALT}}" />
+  <meta property="og:site_name" content="{{PERSON_NAME}}" />
+  <meta property="og:locale" content="{{OG_LOCALE}}" />
+  <meta property="og:locale:alternate" content="{{OG_ALTERNATE}}" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{TITLE}}" />
   <meta name="twitter:description" content="{{DESCRIPTION}}" />
   <meta name="twitter:image" content="{{SHARE_IMAGE_URL}}" />
-  <meta name="twitter:image:alt" content="Saif Thabet’s silver monogram and name on a charcoal portfolio card" />
+  <meta name="twitter:image:alt" content="{{SHARE_IMAGE_ALT}}" />
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-512-optimized.png" type="image/png" sizes="512x512" />
@@ -46,6 +49,7 @@
     <ul class="nav__links" id="navLinks">{{DESKTOP_NAV}}</ul>
 
     <div class="nav__actions">
+      {{LANGUAGE_LINK}}
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Light theme" aria-pressed="false">
         <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
       </button>
@@ -85,7 +89,7 @@
       <p class="footer__share-status" id="shareStatus" role="status"></p>
       <div class="footer__share-link" id="shareFallback" hidden>
         <label for="shareUrl">Portfolio link</label>
-        <input id="shareUrl" type="url" value="{{HOME_URL}}" readonly />
+        <input id="shareUrl" type="url" dir="ltr" value="{{HOME_URL}}" readonly />
       </div>
     </div>
   </footer>

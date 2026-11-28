@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Contact | Saif Thabet</title>
   <meta name="description" content="Contact Saif Thabet to discuss a website, frontend development project or collaboration." />
   <meta name="author" content="Saif Thabet" />
-  <meta name="theme-color" content="#080b10" />
+  <meta name="theme-color" content="#000000" />
   <link rel="canonical" href="https://www.saifthabet.tech/contact" />
+  <link rel="alternate" hreflang="en" href="https://www.saifthabet.tech/contact" />
+  <link rel="alternate" hreflang="ar" href="https://www.saifthabet.tech/ar/contact" />
+  <link rel="alternate" hreflang="x-default" href="https://www.saifthabet.tech/contact" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Contact | Saif Thabet" />
@@ -19,6 +22,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Saif Thabet’s silver monogram and name on a charcoal portfolio card" />
   <meta property="og:site_name" content="Saif Thabet" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_YE" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | Saif Thabet" />
@@ -30,9 +35,9 @@
   <link rel="icon" href="/favicon-512-optimized.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <script src="/theme-init.js?v=37463a6e34d6"></script>
-  <link rel="stylesheet" href="/style.css?v=7108f2546121" />
-  <script src="/script.js?v=705cfee3a3c9" defer></script>
+  <script src="/theme-init.js?v=f1e8452a5b73"></script>
+  <link rel="stylesheet" href="/style.css?v=f8cc24032fbb" />
+  <script src="/script.js?v=dcdbe95f2b2b" defer></script>
 </head>
 <body id="top" data-page="contact">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -49,6 +54,7 @@
       <li><a href="/contact" class="nav__link active" aria-current="page">Contact</a></li></ul>
 
     <div class="nav__actions">
+      <a class="language-switch" id="languageSwitch" href="/ar/contact" hreflang="ar" lang="ar" dir="rtl">العربية</a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Light theme" aria-pressed="false">
         <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
       </button>
@@ -69,10 +75,10 @@
 
   <main id="main-content" tabindex="-1">
 <section class="section contact" id="contact">
+    <canvas class="page-constellation" id="pageConstellation" aria-hidden="true"></canvas>
     <div class="container">
-      <div class="section__label">Contact</div>
-      <h1 class="section__heading">Let's <em>Work Together</em></h1>
-      <p class="section__sub">Have a project in mind? Let's talk and build something great.</p>
+      <h1 class="section__heading">Contact</h1>
+      <p class="section__sub">Get in touch about a website, frontend project, or job opportunity.</p>
 
       <div class="contact__grid">
 
@@ -83,7 +89,7 @@
             <div class="contact__item-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
             <div>
               <span class="contact__item-label">Email</span>
-              <a href="mailto:saifthabett@gmail.com" class="contact__item-val">saifthabett@gmail.com</a>
+              <a href="mailto:saifthabett@gmail.com" class="contact__item-val" dir="ltr">saifthabett@gmail.com</a>
             </div>
           </div>
 
@@ -91,7 +97,7 @@
             <div class="contact__item-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="m8 7 1.4 2.8-1 1a9 9 0 0 0 3.8 3.8l1-1L16 15c-1 4-9-1-9-5 0-1.5.5-2.5 1-3Z"/></svg></div>
             <div>
               <span class="contact__item-label">WhatsApp</span>
-              <a href="https://wa.me/967735581855" target="_blank" rel="noopener noreferrer" class="contact__item-val">+967 735 581 855</a>
+              <a href="https://wa.me/967735581855" target="_blank" rel="noopener noreferrer" class="contact__item-val" dir="ltr">+967 735 581 855</a>
             </div>
           </div>
 
@@ -99,7 +105,7 @@
             <div class="contact__item-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7m5 0v-7m0 3c0-4 5-4 5 0v4"/><circle cx="7" cy="7" r=".9" fill="currentColor" stroke="none"/></svg></div>
             <div>
               <span class="contact__item-label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/saif-thabet-25a2702a6" target="_blank" rel="noopener noreferrer" class="contact__item-val">saif-thabet</a>
+              <a href="https://www.linkedin.com/in/saif-thabet-25a2702a6" target="_blank" rel="noopener noreferrer" class="contact__item-val" dir="ltr">saif-thabet</a>
             </div>
           </div>
 
@@ -110,19 +116,19 @@
             <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="form-group">
               <label for="formName">Your Name</label>
-              <input type="text" id="formName" name="name" autocomplete="name" required />
+              <input type="text" id="formName" name="name" autocomplete="name" dir="auto" required />
             </div>
             <div class="form-group">
               <label for="formEmail">Your Email</label>
-              <input type="email" id="formEmail" name="email" autocomplete="email" required />
+              <input type="email" id="formEmail" name="email" autocomplete="email" dir="ltr" required />
             </div>
             <div class="form-group">
               <label for="formSubject">Subject (optional)</label>
-              <input type="text" id="formSubject" name="subject" />
+              <input type="text" id="formSubject" name="subject" dir="auto" />
             </div>
             <div class="form-group">
               <label for="formMessage">Your Message</label>
-              <textarea id="formMessage" name="message" rows="5" required></textarea>
+              <textarea id="formMessage" name="message" rows="5" dir="auto" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Send Message</span>
@@ -158,7 +164,7 @@
       <p class="footer__share-status" id="shareStatus" role="status"></p>
       <div class="footer__share-link" id="shareFallback" hidden>
         <label for="shareUrl">Portfolio link</label>
-        <input id="shareUrl" type="url" value="https://www.saifthabet.tech/" readonly />
+        <input id="shareUrl" type="url" dir="ltr" value="https://www.saifthabet.tech/" readonly />
       </div>
     </div>
   </footer>

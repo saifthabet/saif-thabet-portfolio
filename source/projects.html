@@ -1,8 +1,6 @@
 <section class="section projects" id="projects">
     <div class="container">
-      <div class="section__label">Work &amp; Services</div>
       <h1 class="section__heading">Selected <em>Work</em></h1>
-      <p class="section__sub">Websites and applications for businesses, customers, and everyday workflows.</p>
       <a class="section-jump" href="#services">Explore my services</a>
 
       <div class="projects__grid">
@@ -10,7 +8,7 @@
         <!-- Project Card 1 — Layers of Heaven -->
         <article class="project-card" id="layers-of-heaven" tabindex="-1">
           <div class="project-card__img">
-            <img src="layers-of-heaven-live.webp" alt="Layers of Heaven homepage in English, with language and shopping bag controls" width="1280" height="720" loading="lazy" decoding="async" />
+            <img src="/layers-of-heaven-live.webp" alt="Layers of Heaven homepage in English, with language and shopping bag controls" width="1280" height="720" loading="lazy" decoding="async" />
           </div>
           <div class="project-card__body">
             <h2 class="project-card__title">Layers of Heaven</h2>
@@ -23,17 +21,13 @@
           </div>
         </article>
 
-        <!-- Project Card 2 — Fresh Bakery -->
-        <article class="project-card">
+        <article class="project-card" id="nawah">
           <div class="project-card__img">
-            <img src="fresh-bakery.webp" alt="Fresh Bakery website screenshot" width="1310" height="629" loading="lazy" decoding="async" />
-            <span class="project-card__status"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg> Portfolio project</span>
+            <img src="/nawah-coffee.png" alt="Nawan’s Arabic homepage with a glass of Yemeni coffee and a link to the menu" width="1270" height="670" loading="lazy" decoding="async" />
           </div>
           <div class="project-card__body">
-            <h2 class="project-card__title">Fresh Bakery Website</h2>
-            <p class="project-card__desc">
-              A fully responsive, multi-section bakery website — featuring JS-powered menu filtering, a lightbox gallery, bilingual branding, and a structured content system for easy management.
-            </p>
+            <h2 class="project-card__title">Nawan</h2>
+            <p class="project-card__desc">A bilingual website for a specialty Yemeni coffee shop in Sana’a. Customers can browse the café menu, shop for Yemeni coffee beans and qishr, and add brewing equipment or gift sets to their cart.</p>
             <div class="project-card__tech">
               <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
             </div>
@@ -43,7 +37,7 @@
         <!-- Project Card 3 - Thabet Son Corporation -->
         <article class="project-card">
   <div class="project-card__img">
-    <img src="thabet-son-corporation.webp" alt="Thabet Son Corporation website screenshot" width="1207" height="596" loading="lazy" decoding="async" />
+    <img src="/thabet-son-corporation.webp" alt="Thabet Son Corporation website screenshot" width="1207" height="596" loading="lazy" decoding="async" />
 
     <span class="project-card__status"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg> Private client project</span>
   </div>
@@ -52,9 +46,7 @@
     <h2 class="project-card__title">Thabet Son Corporation</h2>
 
     <p class="project-card__desc">
-      A professional corporate website for a printing and digital solutions
-      company — showcasing products, services, business solutions, and
-      customer-focused digital experiences.
+      A WordPress site for a printing and digital solutions company, with sections for equipment, services, and business solutions.
     </p>
 
     <div class="project-card__tech">
@@ -63,19 +55,35 @@
   </div>
 </article>
         <!-- Project Card 4 - Modem Manager -->
-        <article class="project-card">
+        <article class="project-card" id="modem-manager">
           <div class="project-card__img">
-              <img src="modem-manager.webp" alt="Modem Manager Android application interface" width="1280" height="853" loading="lazy" decoding="async" />
+              <img src="/modem-manager.webp" alt="Modem Manager Android application interface" width="1280" height="853" loading="lazy" decoding="async" />
             <span class="project-card__status"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5-2-3m10 3 2-3M5 10a7 7 0 0 1 14 0Zm0 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6M2 11v7m20-7v7M8 20v2m8-2v2"/><circle cx="9" cy="7" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="7" r=".7" fill="currentColor" stroke="none"/></svg> Android application</span>
           </div>
           <div class="project-card__body">
             <h2 class="project-card__title">Modem Manager App</h2>
             <p class="project-card__desc">
-              Android application for modem management — displays real-time device data, network status, and connectivity information in a clean mobile interface.
+              An Android app that brings modem data, network status, and connection details into one mobile interface.
             </p>
             <div class="project-card__tech">
               <span>Android</span><span>Java</span><span>API</span>
             </div>
+            <section class="modem-demo" id="modemDemo" aria-labelledby="modemDemoTitle" hidden>
+              <h3 id="modemDemoTitle">Try the connection states</h3>
+              <p>Interactive preview with simulated network data.</p>
+              <div class="modem-demo__display" data-connection="connected">
+                <div class="modem-demo__readout" role="status" aria-atomic="true">
+                  <strong id="connectionLabel">Connected</strong>
+                  <span id="connectionDetail">Strong signal · −55 dBm</span>
+                </div>
+                <div class="modem-demo__signal" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="demo-options" role="group" aria-label="Simulated connection">
+                <button class="demo-choice" type="button" data-connection-choice="connected" aria-pressed="true">Connected</button>
+                <button class="demo-choice" type="button" data-connection-choice="weak" aria-pressed="false">Weak signal</button>
+                <button class="demo-choice" type="button" data-connection-choice="offline" aria-pressed="false">Offline</button>
+              </div>
+            </section>
           </div>
         </article>
 

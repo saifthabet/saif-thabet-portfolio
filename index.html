@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Saif Thabet | Software Engineer &amp; Frontend Developer</title>
   <meta name="description" content="Saif Thabet is a software engineer and frontend developer based in Sana’a, Yemen. Explore his web projects, professional experience, and contact details." />
   <meta name="author" content="Saif Thabet" />
-  <meta name="theme-color" content="#080b10" />
+  <meta name="theme-color" content="#000000" />
   <link rel="canonical" href="https://www.saifthabet.tech/" />
+  <link rel="alternate" hreflang="en" href="https://www.saifthabet.tech/" />
+  <link rel="alternate" hreflang="ar" href="https://www.saifthabet.tech/ar" />
+  <link rel="alternate" hreflang="x-default" href="https://www.saifthabet.tech/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Saif Thabet | Software Engineer &amp; Frontend Developer" />
@@ -19,6 +22,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Saif Thabet’s silver monogram and name on a charcoal portfolio card" />
   <meta property="og:site_name" content="Saif Thabet" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_YE" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Saif Thabet | Software Engineer &amp; Frontend Developer" />
@@ -29,10 +34,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-512-optimized.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.saifthabet.tech/#website","name":"Saif Thabet","alternateName":"Saif Thabet Portfolio","url":"https://www.saifthabet.tech/","inLanguage":"en"},{"@type":"ProfilePage","@id":"https://www.saifthabet.tech/#profile","url":"https://www.saifthabet.tech/","name":"Saif Thabet | Software Engineer & Frontend Developer","description":"Saif Thabet is a software engineer and frontend developer based in Sana’a, Yemen. Explore his web projects, professional experience, and contact details.","isPartOf":{"@id":"https://www.saifthabet.tech/#website"},"mainEntity":{"@type":"Person","@id":"https://www.saifthabet.tech/#saif-thabet","name":"Saif Thabet","url":"https://www.saifthabet.tech/","jobTitle":"Software Engineer & Frontend Developer","homeLocation":{"@type":"Place","name":"Sana’a, Yemen"},"sameAs":["https://www.linkedin.com/in/saif-thabet-25a2702a6"]}}]}</script>
-  <script src="/theme-init.js?v=37463a6e34d6"></script>
-  <link rel="stylesheet" href="/style.css?v=7108f2546121" />
-  <script src="/script.js?v=705cfee3a3c9" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.saifthabet.tech/#website","name":"Saif Thabet","alternateName":"Saif Thabet Portfolio","url":"https://www.saifthabet.tech/","inLanguage":["en","ar"]},{"@type":"ProfilePage","@id":"https://www.saifthabet.tech/#profile","url":"https://www.saifthabet.tech/","name":"Saif Thabet | Software Engineer & Frontend Developer","description":"Saif Thabet is a software engineer and frontend developer based in Sana’a, Yemen. Explore his web projects, professional experience, and contact details.","inLanguage":"en","isPartOf":{"@id":"https://www.saifthabet.tech/#website"},"mainEntity":{"@type":"Person","@id":"https://www.saifthabet.tech/#saif-thabet","name":"Saif Thabet","url":"https://www.saifthabet.tech/","jobTitle":"Software Engineer & Frontend Developer","homeLocation":{"@type":"Place","name":"Sana’a, Yemen"},"sameAs":["https://www.linkedin.com/in/saif-thabet-25a2702a6"]}}]}</script>
+  <script src="/theme-init.js?v=f1e8452a5b73"></script>
+  <link rel="stylesheet" href="/style.css?v=f8cc24032fbb" />
+  <script src="/script.js?v=dcdbe95f2b2b" defer></script>
 </head>
 <body id="top" data-page="hero">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -49,6 +54,7 @@
       <li><a href="/contact" class="nav__link">Contact</a></li></ul>
 
     <div class="nav__actions">
+      <a class="language-switch" id="languageSwitch" href="/ar" hreflang="ar" lang="ar" dir="rtl">العربية</a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Light theme" aria-pressed="false">
         <svg class="icon" id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g class="theme-icon__sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g><g class="theme-icon__moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></svg>
       </button>
@@ -69,8 +75,7 @@
 
   <main id="main-content" tabindex="-1">
 <section class="hero" id="hero">
-    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
-
+    <canvas class="page-constellation" id="pageConstellation" aria-hidden="true"></canvas>
     <div class="hero__noise"></div>
 
     <div class="hero__content">
@@ -84,10 +89,10 @@
         <span class="name__line name__line--accent">Thabet</span>
       </h1>
 
-      <p class="hero__title"><span class="title__prefix" aria-hidden="true">—</span> Software Engineer &amp; Frontend Developer</p>
+      <p class="hero__title">Software Engineer &amp; Frontend Developer</p>
 
       <p class="hero__tagline">
-        I build responsive websites and interfaces for businesses, with a focus on <em>accessible design</em> and <em>clean code</em>.
+        I’m a computer science graduate based in Sana’a, with hands-on experience in frontend development, IT operations, and digital marketing. I turn business requirements into responsive, accessible interfaces and write code that’s easy to maintain.
       </p>
 
       <div class="hero__cta">
@@ -99,14 +104,8 @@
         </a>
       </div>
 
-      
     </div>
 
-    <ul class="hero__facts" aria-label="At a glance">
-      <li><span>Selected work</span> Websites &amp; apps</li>
-      <li><span>Education</span> B.Sc. Computer Science</li>
-      <li><span>Based in</span> Sana’a, Yemen</li>
-    </ul>
   </section>
 
 <section class="section featured" id="featured" aria-labelledby="featured-heading">
@@ -114,7 +113,7 @@
     <div class="section__label">Featured project</div>
     <article class="featured__card">
       <div class="featured__image">
-        <img src="layers-of-heaven-live.webp" alt="Layers of Heaven homepage with a bakery gift box and links to the menu and gallery" width="1280" height="720" decoding="async" />
+        <img src="/layers-of-heaven-live.webp" alt="Layers of Heaven homepage with a bakery gift box and links to the menu and gallery" width="1280" height="720" decoding="async" />
       </div>
       <div class="featured__body">
         <p class="featured__category">Bakery &amp; desserts · Website</p>
@@ -129,40 +128,22 @@
 
 <section class="section about" id="about">
     <div class="container">
-      <div class="section__label">About Me</div>
-
       <div class="about__solo">
-        <h2 class="section__heading">
-          Building the web,<br><em>one pixel at a time.</em>
-        </h2>
+        <h2 class="section__heading">About me</h2>
 
         <div class="about__bio-wrap">
           <p class="about__bio">
-            Hi, I'm <strong>Saif Thabet</strong> — a Software Engineer, Frontend Developer and Computer Science graduate from Nile University, Egypt. I build fast, accessible and user-centered web experiences using modern web technologies.
+            I’m a software engineer based in Sana’a, Yemen. I studied computer science at Nile University in Egypt.
           </p>
 
           <p class="about__bio">
-            Beyond coding, I bring a unique blend of IT expertise and digital marketing insight from my hands-on role at <strong>Thabet Son Corporation</strong>. I understand both the technical and business sides of the web — which makes me a developer who doesn't just build, but <em>thinks strategically.</em>
+            At <strong>Thabet Son Corporation</strong>, I work across IT support, digital marketing, and web development. I build and maintain web assets and internal tools, administer KomiDoc, and run online campaigns for printing and digital solutions.
           </p>
-        </div>
-
-        <div class="about__bottom">
-          <div class="about__tags">
-            <span class="tag">Problem Solver</span>
-            <span class="tag">Detail Oriented</span>
-            <span class="tag">Fast Learner</span>
-            <span class="tag">Team Player</span>
-          </div>
-          <div class="about__location">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Sana'a, Yemen</span>
-          </div>
         </div>
 
         <div class="about__actions">
            <a href="/experience" class="btn btn--outline">Experience &amp; Skills</a>
-           <a href="/contact" class="btn btn--ghost btn--sm">Let’s talk</a>
-           <a href="Saif_Thabet_CV_En.pdf"
+           <a href="/Saif_Thabet_CV_En.pdf"
             class="btn btn--primary btn--sm"
             download="Saif_Thabet_CV_En.pdf">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
@@ -195,7 +176,7 @@
       <p class="footer__share-status" id="shareStatus" role="status"></p>
       <div class="footer__share-link" id="shareFallback" hidden>
         <label for="shareUrl">Portfolio link</label>
-        <input id="shareUrl" type="url" value="https://www.saifthabet.tech/" readonly />
+        <input id="shareUrl" type="url" dir="ltr" value="https://www.saifthabet.tech/" readonly />
       </div>
     </div>
   </footer>
