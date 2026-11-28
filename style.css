@@ -440,20 +440,25 @@ main > .section:first-child > .container { position: relative; }
   .page-constellation::before {
     content: '';
     position: absolute;
-    inset: -14px;
+    inset: 0;
     background: url('/constellation-mobile.png') center top / cover no-repeat;
   }
   .page-constellation canvas { display: none; }
 }
 
-@media (max-width: 768px) and (prefers-reduced-motion: no-preference), (pointer: coarse) and (prefers-reduced-motion: no-preference) {
-  /* Move the image at its original proportions instead of redrawing a canvas. */
-  .page-constellation::before { animation: constellation-drift 10s ease-in-out infinite alternate; }
+.constellation-dot, .constellation-line {
+  display: none;
+  position: absolute;
+  inset: 0 auto auto 0;
+  background: rgb(var(--accent-rgb));
 }
-
-@keyframes constellation-drift {
-  from { transform: translate(-9px, 8px); }
-  to { transform: translate(11px, -10px); }
+.constellation-dot { border-radius: 50%; }
+.constellation-line { width: 1px; height: 1px; transform-origin: left center; }
+[data-mobile-motion] :is(.constellation-dot, .constellation-line) { display: block; }
+[data-mobile-motion]::before { visibility: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  [data-mobile-motion] :is(.constellation-dot, .constellation-line) { display: none; }
+  [data-mobile-motion]::before { visibility: visible; }
 }
 
 /* Grouped-page flow and compact proof of work on the homepage. */

@@ -223,6 +223,97 @@ if (context) {
   }
 }
 
+const constellation = canvas?.parentElement;
+if (constellation) {
+  const mobileScreen = matchMedia('(max-width: 768px), (pointer: coarse)');
+  const dots = [];
+  const lines = [];
+  let frame = 0;
+  let lastFrame = 0;
+  let inView = true;
+
+  // Move HTML elements on phones to avoid redrawing a canvas during viewport changes.
+  function animateMobileConstellation(now) {
+    frame = requestAnimationFrame(animateMobileConstellation);
+    if (now - lastFrame < 32) return;
+
+    const width = constellation.clientWidth;
+    const height = constellation.clientHeight;
+    if (!width || !height) return;
+
+    const elapsed = lastFrame ? Math.min((now - lastFrame) / 1000, 0.06) : 0;
+    lastFrame = now;
+    while (dots.length < 28) {
+      const element = document.createElement('span');
+      element.className = 'constellation-dot';
+      element.style.width = element.style.height = `${1.5 + Math.random() * 1.5}px`;
+      constellation.append(element);
+      dots.push({
+        element, x: Math.random() * width, y: Math.random() * height,
+        angle: Math.random() * Math.PI * 2,
+        speed: 34 + Math.random() * 38,
+        turn: Math.random() * 1.5 - 0.75,
+      });
+    }
+
+    for (const dot of dots) {
+      dot.angle += dot.turn * elapsed;
+      dot.x = (dot.x + Math.cos(dot.angle) * dot.speed * elapsed + width) % width;
+      dot.y = (dot.y + Math.sin(dot.angle) * dot.speed * elapsed + height) % height;
+      dot.edge = Math.min(1, Math.min(dot.x, width - dot.x, dot.y, height - dot.y) / 24);
+      dot.element.style.transform = `translate(${dot.x}px, ${dot.y}px) translate(-50%, -50%)`;
+      dot.element.style.opacity = 0.65 * dot.edge;
+    }
+
+    const connectionRadius = 108;
+    let usedLines = 0;
+    for (const [index, dot] of dots.entries()) {
+      for (let i = index + 1; i < dots.length; i++) {
+        const neighbor = dots[i];
+        const dx = neighbor.x - dot.x;
+        const dy = neighbor.y - dot.y;
+        const length = Math.hypot(dx, dy);
+        if (length >= connectionRadius) continue;
+
+        let line = lines[usedLines++];
+        if (!line) {
+          line = document.createElement('span');
+          line.className = 'constellation-line';
+          lines.push(line);
+          constellation.prepend(line);
+        }
+        line.style.transform = `translate(${dot.x}px, ${dot.y}px) rotate(${Math.atan2(dy, dx)}rad) scaleX(${length})`;
+        line.style.opacity = (1 - length / connectionRadius) * 0.28 * Math.min(dot.edge, neighbor.edge);
+      }
+    }
+    for (let i = usedLines; i < lines.length; i++) lines[i].style.opacity = 0;
+    if (!constellation.hasAttribute('data-mobile-motion')) constellation.setAttribute('data-mobile-motion', '');
+  }
+
+  function syncMobileConstellation() {
+    const enabled = mobileScreen.matches && motion.matches;
+    if (!enabled) constellation.removeAttribute('data-mobile-motion');
+    if (enabled && inView && !document.hidden) {
+      if (!frame) frame = requestAnimationFrame(animateMobileConstellation);
+    } else {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      lastFrame = 0;
+    }
+  }
+
+  syncMobileConstellation();
+  mobileScreen.addEventListener('change', syncMobileConstellation);
+  motion.addEventListener('change', syncMobileConstellation);
+  document.addEventListener('visibilitychange', syncMobileConstellation);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      syncMobileConstellation();
+    }).observe(constellation);
+  }
+}
+
 function selectChoice(choices, selected) {
   choices.forEach(choice => choice.setAttribute('aria-pressed', String(choice === selected)));
 }
