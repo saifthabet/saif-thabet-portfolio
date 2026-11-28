@@ -436,9 +436,24 @@ body:not([data-page="hero"]) .page-constellation { max-height: 100svh; }
 main > .section:first-child > .container { position: relative; }
 
 @media (max-width: 768px), (pointer: coarse) {
-  /* Keep the constellation proportional as mobile browser bars move. */
-  .page-constellation { background: url('/constellation-mobile.png') center top / cover no-repeat; }
+  .page-constellation { overflow: hidden; }
+  .page-constellation::before {
+    content: '';
+    position: absolute;
+    inset: -14px;
+    background: url('/constellation-mobile.png') center top / cover no-repeat;
+  }
   .page-constellation canvas { display: none; }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference), (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  /* Move the image at its original proportions instead of redrawing a canvas. */
+  .page-constellation::before { animation: constellation-drift 10s ease-in-out infinite alternate; }
+}
+
+@keyframes constellation-drift {
+  from { transform: translate(-9px, 8px); }
+  to { transform: translate(11px, -10px); }
 }
 
 /* Grouped-page flow and compact proof of work on the homepage. */
