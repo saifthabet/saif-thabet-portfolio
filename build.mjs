@@ -108,7 +108,7 @@ function buildPage(page, language) {
   const content = page.sections.map((name, index) => {
     let section = read(`source/${name}.html`);
     if (index === 0) {
-      section = section.replace(/<section\b[^>]*>/, '$&\n    <canvas class="page-constellation" id="pageConstellation" aria-hidden="true"></canvas>');
+      section = section.replace(/<section\b[^>]*>/, '$&\n    <div class="page-constellation" aria-hidden="true"><canvas id="pageConstellation"></canvas></div>');
     } else {
       section = section.replace(/<h1\b/g, '<h2').replace(/<\/h1>/g, '</h2>');
     }

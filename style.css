@@ -67,6 +67,7 @@
   --control-border: #697489;
   --on-accent:   #171208;
   --header-h:    calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  --page-header-offset: var(--header-h);
 
   --text:        #e8eaf0;
   --text-2:      #8a93a6;
@@ -358,7 +359,9 @@ html:not([data-enhanced]) .theme-toggle { display: none; }
 /* Persistent mobile page navigation, including iPhone home-indicator clearance. */
 .mobile-bar { display: none; }
 @media (max-width: 1100px) {
+  :root { --page-header-offset: 0px; }
   html { scroll-padding-bottom: calc(108px + env(safe-area-inset-bottom, 0px)); }
+  .navbar { position: sticky; flex-shrink: 0; }
   body { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
   .mobile-bar {
     display: grid;
@@ -419,7 +422,7 @@ body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: col
 main { flex: 1; }
 body:not([data-page="hero"]) main > .section:first-child {
   min-height: calc(100svh - 160px);
-  padding-top: calc(var(--header-h) + clamp(40px, 6vw, 80px));
+  padding-top: calc(var(--page-header-offset) + clamp(40px, 6vw, 80px));
 }
 .page-constellation {
   position: absolute;
@@ -428,8 +431,15 @@ body:not([data-page="hero"]) main > .section:first-child {
   height: 100%;
   pointer-events: none;
 }
+.page-constellation canvas { display: block; width: 100%; height: 100%; }
 body:not([data-page="hero"]) .page-constellation { max-height: 100svh; }
 main > .section:first-child > .container { position: relative; }
+
+@media (max-width: 768px), (pointer: coarse) {
+  /* Keep the constellation proportional as mobile browser bars move. */
+  .page-constellation { background: url('/constellation-mobile.png') center top / cover no-repeat; }
+  .page-constellation canvas { display: none; }
+}
 
 /* Grouped-page flow and compact proof of work on the homepage. */
 .section.featured { padding-block: clamp(40px, 6vw, 72px); background: var(--bg-2); }
@@ -569,7 +579,7 @@ main > .section:first-child > .container { position: relative; }
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  padding: calc(var(--header-h) + clamp(28px, 4vw, 56px)) max(clamp(20px, 8vw, 120px), env(safe-area-inset-right, 0px)) clamp(36px, 5vw, 68px) max(clamp(20px, 8vw, 120px), env(safe-area-inset-left, 0px));
+  padding: calc(var(--page-header-offset) + clamp(28px, 4vw, 56px)) max(clamp(20px, 8vw, 120px), env(safe-area-inset-right, 0px)) clamp(36px, 5vw, 68px) max(clamp(20px, 8vw, 120px), env(safe-area-inset-left, 0px));
   overflow: hidden;
 }
 

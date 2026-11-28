@@ -176,8 +176,12 @@ if (context) {
   }
 
   function sizeConstellation() {
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (!width || !height || (particles.length && canvas.width === width && canvas.height === height)) return;
+
+    canvas.width = width;
+    canvas.height = height;
     particles = Array.from({ length: canvas.width < 768 ? 30 : 54 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -189,10 +193,14 @@ if (context) {
   }
 
   sizeConstellation();
-  window.addEventListener('resize', sizeConstellation, { passive: true });
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(sizeConstellation).observe(canvas);
+  } else {
+    window.addEventListener('resize', sizeConstellation, { passive: true });
+  }
 
   // Drift briefly, then let the background settle in place.
-  if (motion.matches && !document.hidden) {
+  if (particles.length && motion.matches && !document.hidden) {
     let lastFrame = performance.now();
     const end = lastFrame + 4000;
     function animateConstellation(now) {
